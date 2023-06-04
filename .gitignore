@@ -1,0 +1,60 @@
+# Fichiers objets
+*.o
+
+# Fichiers binaires exécutables
+*.exe
+*.out
+
+# Bibliothèques
+*.a
+*.so
+
+
+# Fichiers générés par la compilation
+*.d
+
+# Fichiers de sauvegarde et de récupération automatique des éditeurs de texte
+*~
+.#*
+
+# Fichiers de logs
+*.log
+
+# Fichiers de configuration spécifiques à l'environnement
+config.mk
+
+# Dossiers générés par la compilation
+/bin/
+/obj/
+/lib/
+
+# Fichiers spécifiques à l'environnement de développement
+.vscode/
+.idea/
+
+# Fichiers de documentation générés
+/doc/
+/docs/
+
+# Fichiers d'environnement
+.env
+.env.*
+
+# Fichiers de données ou de sauvegarde sensibles
+*.dat
+*.bak
+
+# Fichiers de débogage
+*.dSYM/
+*.pdb
+*.dbg
+
+# Fichiers de résultats de tests
+*.xml
+*.gcov
+*.gcda
+*.gcno
+
+# Fichiers spécifiques à l'éditeur
+/.vimrc
+/.emacs

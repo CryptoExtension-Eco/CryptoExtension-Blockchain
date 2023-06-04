@@ -1,4 +1,4 @@
-CC = g++
+CC = gcc
 CFLAGS = -g -Wall
 LDFLAGS = -L/usr/local/lib -lcryptopp -lpthread
 
@@ -7,16 +7,18 @@ OBJDIR = obj
 
 EXECUTABLE = Block
 
-SRC = $(wildcard $(SRCDIR)/*.cpp)
-OBJ = $(patsubst $(SRCDIR)/%.cpp,$(OBJDIR)/%.o,$(SRC))
+SRC = $(wildcard $(SRCDIR)/*.c)
+OBJ = $(patsubst $(SRCDIR)/%.c,$(OBJDIR)/%.o,$(SRC))
 
 all: $(EXECUTABLE)
 
 $(EXECUTABLE): $(OBJ)
 	$(CC) $(LDFLAGS) $^ -o $@
 
-$(OBJDIR)/%.o: $(SRCDIR)/%.cpp
+$(OBJDIR)/%.o: $(SRCDIR)/%.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
 	rm -f $(OBJDIR)/*.o $(EXECUTABLE)
+
+re: clean all
